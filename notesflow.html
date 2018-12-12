@@ -1,0 +1,488 @@
+<!DOCTYPE html><html lang="en"><head>
+<title> Notesflow</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="()">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style type="text/css">
+body h1,p{line-height:1.6}body,pre{word-break:break-word}.tag.label,.xsj_mindmap_caption,kbd{display:inline-block}body,kbd{color:#2f2f2f}img,kbd{vertical-align:middle}address,dl{margin-bottom:20px}blockquote p,ol ol,ol ul,ul ol,ul ul{margin-bottom:0}address,blockquote small{display:block;line-height:20px}address,blockquote small,dd,dt{line-height:20px}.xiaoshujiang_pre,pre{word-wrap:break-word;tab-size:4;white-space:pre-wrap}.li_linenum,.xiaoshujiang_code.hljs.code_linenums,code.hljs.code_linenums{position:relative}img,table{max-width:100%}body{font-family:'Helvetica Neue',Helvetica,Tahoma,Arial,'Hiragino Sans GB',STHeiti,"Microsoft YaHei","微软雅黑",'WenQuanYi Micro Hei',STXihei,"华文细黑",Heiti,"黑体",SimSun,"宋体",Song,sans-serif;font-size:16px;line-height:1.33;font-weight:100;word-wrap:break-word;letter-spacing:0;word-spacing:.25em}a:focus{outline:#333 dotted thin;outline:-webkit-focus-ring-color auto 5px;outline-offset:-2px}a:active,a:hover{outline:0}a{color:#08c;text-decoration:none}a:hover{color:#005580;text-decoration:underline}h1,h2,h3,h4,h5,h6{margin:1em 0 .6em;font-family:inherit;font-weight:500;line-height:2.35rem;color:inherit;text-rendering:optimizelegibility}.mermaid_svg,.xiaoshujiang_pre,pre{font-family:monospace}h1{font-size:3.4rem}h2{font-size:3rem}h3{font-size:2.45rem}h4{font-size:2.1rem}h5{font-size:1.9rem}h6{font-size:1.5rem}body h2,body h3{line-height:1.1}hr{margin:20px 0;border:0;border-top:1px dashed #2f2f2f;border-left:90px solid transparent;border-right:90px solid transparent}p{margin:0 0 1.1em}pre{line-height:initial!important}kbd{padding:3px 5px;font-size:11px;line-height:10px;background-color:#fcfcfc;border:1px solid #2f2f2f;border-bottom-color:#2f2f2f;border-radius:3px;box-shadow:inset 0 -1px 0 #2f2f2f}address{font-style:normal}img{height:auto;border:0}table{background-color:transparent;border-collapse:collapse;border-spacing:0;word-break:initial;border:1px solid rgba(34,36,38,.15)}small{font-size:85%}dt,strong{font-weight:700}em{font-style:italic}cite{font-style:normal}ol,ul{padding:0;margin:0 0 10px 35px}dd{margin-left:10px}body dd,body dt{line-height:1.35em}abbr[data-original-title],abbr[title]{cursor:help;border-bottom:1px dotted #999}blockquote{padding:0 0 0 15px;margin:0 0 20px;border-left:10px solid rgba(153,153,153,.3);background:rgba(204,204,204,.4)}blockquote p{display:inline;font-size:16px;font-weight:300;line-height:25px}.table th,.tag.label{font-weight:700}blockquote small{color:#999}blockquote small:before{content:'\2014 \00A0'}blockquote footer{margin:1em 0;font-style:italic}blockquote footer cite{margin:0 1em}code{background-color:rgba(214,219,223,.28);color:#2C3E50;border-radius:4px;padding:2px 4px}body code{border:0;border-radius:4px;font-size:90%}text{font-size:14px}h1.story_title{margin:.7em 0}.story_tags{margin:0 0 1.2em}.tag.label{vertical-align:baseline;line-height:1;margin:.125em;background-color:#ebeeef;border-color:#ebeeef;background-image:none;padding:.6em .8em;color:#5e6060;text-transform:none;border-radius:.2857rem;box-sizing:border-box;font-size:12px}.table{width:100%;margin-bottom:20px;margin-right:auto;margin-left:auto}.table td,.table th{padding:8px;line-height:20px;text-align:left;vertical-align:top;border-top:1px solid #ddd}.table thead th{vertical-align:bottom}.table caption+thead tr:first-child td,.table caption+thead tr:first-child th,.table colgroup+thead tr:first-child td,.table colgroup+thead tr:first-child th,.table thead:first-child tr:first-child td,.table thead:first-child tr:first-child th{border-top:0}.table tbody+tbody{border-top:2px solid #ddd}.table .table{background-color:#fff}.table-striped tbody>tr:nth-child(odd)>td,.table-striped tbody>tr:nth-child(odd)>th{background-color:#f9f9f9}.table-celled.table tr td,.table-celled.table tr th{border-left:1px solid rgba(34,36,38,.1)}.table-celled.table tr td:first-child,.table-celled.table tr th:first-child{border-left:none}.mindmap_container{text-align:center}.xsj_mindmap_caption{border-bottom:1px solid #d9d9d9;color:#999;padding:10px}.hljs,.hljs *{overflow:visible!important}body .xiaoshujiang_code{border:0;border-radius:4px;font-size:90%}.xiaoshujiang_code ol{margin-bottom:0}.xiaoshujiang_pre{line-height:initial!important;word-break:break-word}.xiaoshujiang_code_container pre{margin:0}.xiaoshujiang_code_container.xiaoshujiang_code_chunk{box-shadow:0 0 0 1px #A3C293 inset,0 0 0 0 transparent;margin:1em 0;padding:1em}.xiaoshujiang_code_container.xiaoshujiang_code_chunk_hide_code{box-shadow:initial;padding:initial initial 2em}.xiaoshujiang_code_container .out_put{box-shadow:0 0 0 1px #A3C293 inset,0 0 0 0 transparent;margin:1em 0;background-color:#FCFFF5;padding:1em}.xiaoshujiang_code_container .out_put_error{background-color:#FFF6F6;color:#9F3A38;margin:1em 0;box-shadow:0 0 0 1px #E0B4B4 inset,0 0 0 0 transparent;padding:1em}.ol_linenums{padding:0;margin-left:2em;border-left:1px solid #e0e0e0}.li_linenum{margin-left:.5em;list-style:none;counter-increment:lines 1}.li_linenum.li_list_style{list-style:inherit;margin-left:5px}.li_linenum:before,.li_linenum_before_span{content:counter(lines,decimal);position:absolute;left:-3em;text-align:center;width:2.5em;vertical-align:top}.li_linenum_before_span_hide{display:none}.xiaoshujiang_code_container{margin:1em 0;position:relative;padding-bottom:2em}.xiaoshujiang_code_title_container{font-size:70%;opacity:.5}.xiaoshujiang_code_title_container>.xiaoshujiang_code_infos{float:right}.mark{border:0;background-color:rgba(221,243,231,.4);color:#29754d;padding:2px 4px}.line_mark{border:1px dashed #2f2f2f;margin-top:2px}.xiaoshujiang_code .mark,code .mark{border-radius:0;font-size:initial;padding:initial}a.attachment{background-color:#ecf0f3;border:1px solid #bec6cb;display:inline-block;padding:5px;margin:2px;min-width:250px}a.attachment i.fa{font-size:3em;float:left;margin-right:.2em}a.attachment .filename{vertical-align:top;text-align:left;font-weight:700}.flow-chart,.mermaid,.plot,.plot-image,.sequence-diagram,.story_image_container,.story_remote_resource_block,.video_container{text-align:center}a.attachment .filesize{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;opacity:.6;font-size:80%;white-space:nowrap}.story_image_container>.story_image{display:inline-block;position:relative;max-width:100%}.story_image_caption{border-bottom:1px solid #d9d9d9;display:inline-block;color:#999;padding:10px}.story_image_blank_caption{border-bottom:0}.story_image>img{border-radius:.3125em;box-shadow:0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08)}.story_inline_image>img{vertical-align:bottom}.task-list-item{list-style:none}.task-list-item.li_list_style{list-style:inherit}.task-list-item>input{margin:0 0 0 -20px}.video_container{width:100%;display:table;position:relative;padding-bottom:56.25%!important}.video_container iframe{width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;vertical-align:middle}.slideshare_container .inner{position:relative;width:100%}.slideshare_container .inner iframe{width:100%;height:100%;position:absolute;top:0;bottom:0;left:0;right:0}.toc ul{list-style-type:none}em.cjk_emphasis{font-style:normal;font-family:Georgia,"Times New Roman",Times,"楷体","AR PL UKai CN",NSimSun,"Songti SC",SimSun,serif!important}.plot,.plot-image{min-height:200px;min-width:200px}.story_align_left,.story_align_left .story_image_container{text-align:left}.story_align_right,.story_align_right .story_image_container{text-align:right}.story_align_center,.story_align_center .story_image_container{text-align:center}.story_align_justify,.story_align_justify .story_image_container{text-align:justify}.mathjax-container{text-align:center}div.mathjax{max-width:600px;margin:0 auto;font-size:14px}@media print{body{font-size:18px;word-wrap:break-word;word-break:break-word;background:initial;font-kerning:normal;text-rendering:geometricPrecision}.xiaoshujiang_element.xsj_anchor{position:absolute}.story_image_container,tr{page-break-inside:avoid}.xsj_underline{page-break-after:always;visibility:hidden}}
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fdf6e3;
+  color: #657b83;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #93a1a1;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-built_in,
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.hljs-formula {
+  background: #eee8d5;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ * Copyright (c) 2014-2015, Asciidocfx Team, (MIT Licensed)
+ * https://github.com/asciidocfx/highlight-treeview.js
+ */
+.language-treeview.hljs{
+  position: relative;
+}
+.hljs-folder,
+.hljs-hiddenfile,
+.hljs-file {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    height: 16px;
+}
+.hljs-folder:before,
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    top: 0;
+    content: '';
+    width: 14px;
+    height: 12px;
+    margin-top: 0px;
+    margin-right: 3px;
+    position: relative;
+    display: inline-block;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    height: 14px;
+    margin-left: 1px;
+}
+.hljs-hiddenfile {
+    opacity: 0.6;
+}
+.hljs-file.photo:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c5";
+}
+.hljs-file.plain:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f016";
+}
+.hljs-file.source:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c9";
+}
+.hljs-file.archive:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c6";
+}
+.hljs-file.audio:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c7";
+}
+.hljs-file.video:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c8";
+}
+.hljs-file.pdf:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c1";
+}
+.hljs-file.xls:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c3";
+}
+.hljs-file.doc:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c2";
+}
+.hljs-file.ppt:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f1c4";
+}
+.hljs-folder:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f114";
+}
+.hljs-hiddenfile:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f016";
+}
+.hljs-tvline {
+    margin-left: 6px;
+    position: absolute;
+    text-indent: -99em;
+    padding-bottom: 8px;
+    vertical-align: top;
+    display: inline-block;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch {
+    width: 8px;
+    height: 8px;
+    margin-top: -1px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch.win {
+    width: 14px;
+    margin-right: 2px;
+}
+.hljs-folder-last-branch {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-last-branch.win {
+    width: 13px;
+    margin-right: 2px;
+}
+
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ */
+
+/*wavedrom start*/
+
+.wavedrom_svg text, .wavedrom_svg_defs text {
+    font-size:11pt;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    font-stretch:normal;
+    text-align:center;
+    fill-opacity:1;
+    font-family:Helvetica
+}
+.wavedrom_svg .muted, .wavedrom_svg_defs .muted {
+    fill:#aaa
+}
+.wavedrom_svg .warning, .wavedrom_svg_defs .warning {
+    fill:#f6b900
+}
+.wavedrom_svg .error, .wavedrom_svg_defs .error {
+    fill:#f60000
+}
+.wavedrom_svg .info, .wavedrom_svg_defs .info {
+    fill:#0041c4
+}
+.wavedrom_svg .success, .wavedrom_svg_defs .success {
+    fill:#00ab00
+}
+.wavedrom_svg .h1, .wavedrom_svg_defs .h1 {
+    font-size:33pt;
+    font-weight:bold
+}
+.wavedrom_svg .h2, .wavedrom_svg_defs .h2 {
+    font-size:27pt;
+    font-weight:bold
+}
+.wavedrom_svg .h3, .wavedrom_svg_defs .h3 {
+    font-size:20pt;
+    font-weight:bold
+}
+.wavedrom_svg .h4, .wavedrom_svg_defs .h4 {
+    font-size:14pt;
+    font-weight:bold
+}
+.wavedrom_svg .h5, .wavedrom_svg_defs .h5 {
+    font-size:11pt;
+    font-weight:bold
+}
+.wavedrom_svg .h6, .wavedrom_svg_defs .h6 {
+    font-size:8pt;
+    font-weight:bold
+}
+.wavedrom_svg_defs .s1 {
+    fill:none;
+    stroke:#000;
+    stroke-width:1;
+    stroke-linecap:round;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:none
+}
+.wavedrom_svg_defs .s2 {
+    fill:none;
+    stroke:#000;
+    stroke-width:0.5;
+    stroke-linecap:round;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:none
+}
+.wavedrom_svg_defs .s3 {
+    color:#000;
+    fill:none;
+    stroke:#000;
+    stroke-width:1;
+    stroke-linecap:round;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:1,3;
+    stroke-dashoffset:0;
+    marker:none;
+    visibility:visible;
+    display:inline;
+    overflow:visible;
+    enable-background:accumulate
+}
+.wavedrom_svg_defs .s4 {
+    color:#000;
+    fill:none;
+    stroke:#000;
+    stroke-width:1;
+    stroke-linecap:round;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:none;
+    stroke-dashoffset:0;
+    marker:none;
+    visibility:visible;
+    display:inline;
+    overflow:visible
+}
+.wavedrom_svg_defs .s5 {
+    fill:#fff;
+    stroke:none
+}
+.wavedrom_svg_defs .s6 {
+    color:#000;
+    fill:#ffffb4;
+    fill-opacity:1;
+    fill-rule:nonzero;
+    stroke:none;
+    stroke-width:1px;
+    marker:none;
+    visibility:visible;
+    display:inline;
+    overflow:visible;
+    enable-background:accumulate
+}
+.wavedrom_svg_defs .s7 {
+    color:#000;
+    fill:#ffe0b9;
+    fill-opacity:1;
+    fill-rule:nonzero;
+    stroke:none;
+    stroke-width:1px;
+    marker:none;
+    visibility:visible;
+    display:inline;
+    overflow:visible;
+    enable-background:accumulate
+}
+.wavedrom_svg_defs .s8 {
+    color:#000;
+    fill:#b9e0ff;
+    fill-opacity:1;
+    fill-rule:nonzero;
+    stroke:none;
+    stroke-width:1px;
+    marker:none;
+    visibility:visible;
+    display:inline;
+    overflow:visible;
+    enable-background:accumulate
+}
+.wavedrom_svg_defs .s9 {
+    fill:#000;
+    fill-opacity:1;
+    stroke:none
+}
+.wavedrom_svg_defs .s10 {
+    color:#000;
+    fill:#fff;
+    fill-opacity:1;
+    fill-rule:nonzero;
+    stroke:none;
+    stroke-width:1px;
+    marker:none;
+    visibility:visible;
+    display:inline;
+    overflow:visible;
+    enable-background:accumulate
+}
+.wavedrom_svg_defs .s11 {
+    fill:#0041c4;
+    fill-opacity:1;
+    stroke:none
+}
+.wavedrom_svg_defs .s12 {
+    fill:none;
+    stroke:#0041c4;
+    stroke-width:1;
+    stroke-linecap:round;
+    stroke-linejoin:miter;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:none
+}
+
+/*wavedrom stop*/
+
+/* xsj patch start */
+
+.xiaoshujiang_code .code_line_break_hack{
+    margin:0;
+    border:0;
+    border-top:0;
+    border-bottom:0;
+}
+.component_attachment, .code_line_break_hack{
+  display: none;
+  visibility: collapse!important;
+  height: 0!important;
+}
+
+.blank_anchor_id {
+    float: right;
+    width: 1px
+}
+.blank_anchor_id {
+    visibility: hidden;
+}
+.blank_anchor_id:before {
+    content: 'a';
+}
+.xsj_foreignObject{
+  width: 100%!important;
+  height: 100%!important;
+}
+.xsj_foreignObject hr{
+    margin: inherit;
+}
+
+/* xsj patch end */
+
+</style>
+</head><body>
+<div><div class="preview" id="wmd-preview">
+
+	<div class="preview html_preview xsj_export_html"><h1 class="story_title">Notesflow</h1><div class="story_tags"><span class="tag blue label">流程</span></div><p class="xsj_paragraph_level_0"><strong>在本地创建存放repository文件夹</strong></p>
+<div class="xiaoshujiang_code_container"><pre><code data-info=" bash" class="language-bash hljs">$ mkdir localnotes <span class="hljs-comment">#创建一个名为localnotes的文件夹</span>
+$ <span class="hljs-built_in">cd</span> localnotes/ <span class="hljs-comment">#跳转至创建的文件夹</span>
+</code></pre></div>
+<hr class="xsj_minus">
+<p class="xsj_paragraph_level_0"><strong>将远程repository克隆到本地</strong></p>
+<div class="xiaoshujiang_code_container"><pre><code data-info=" bash" class="language-bash hljs">$ git <span class="hljs-built_in">clone</span> https://github.com/pointerto/notes.git <span class="hljs-comment">#将远程名为notes的仓库克隆到localnotes</span>
+</code></pre></div>
+<hr class="xsj_minus">
+<p class="xsj_paragraph_level_0"><strong>将html文件加入本地localnotes二级文件夹中</strong></p>
+<hr class="xsj_minus">
+<p class="xsj_paragraph_level_0"><strong>查看未被git管理的文件和被修改但还未提交(git commit)的文件</strong></p>
+<div class="xiaoshujiang_code_container"><pre><code data-info=" bash" class="language-bash hljs">$ <span class="hljs-built_in">cd</span> notes/ <span class="hljs-comment">#跳转至html资源所放的文件夹</span>
+$ git status <span class="hljs-comment">#未被git管理的文件和被修改但还未提交(git commit)的文件用红色字体标出</span>
+</code></pre></div>
+<hr class="xsj_minus">
+<p class="xsj_paragraph_level_0"><strong>将网页文件加入git的管理结构</strong></p>
+<div class="xiaoshujiang_code_container"><pre><code data-info=" bash" class="language-bash hljs">$ git add . <span class="hljs-comment">#不要忘记点，可以再次使用git status查看git是否接管文件，如果看见文件都变绿了，那么就代表 它们已经准备好了被提交（git commit）</span>
+</code></pre></div>
+<hr class="xsj_minus">
+<p class="xsj_paragraph_level_0"><strong>将文件上传至远程 master 分支</strong></p>
+<div class="xiaoshujiang_code_container"><pre><code data-info=" bash" class="language-bash hljs">$ git commit -m <span class="hljs-string">"modify"</span> 
+$ git pull <span class="hljs-comment">#出现Already up-to-date再输入下一命令</span>
+$ git push <span class="hljs-comment">#稍候，弹出窗口输入Github账号、密码即可完成发布</span>
+
+</code></pre></div>
+<hr class="xsj_minus">
+<p class="xsj_paragraph_level_0"><strong>2018年12月12日11时04分14秒<br>
+Static pages <a href="https://github.com/pointerto" class="xsj_link xsj_manu_link">@pointerto</a></strong></p>
+</div>
+
+</div></div>
+</body></html>
+
