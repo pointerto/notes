@@ -1,6 +1,17 @@
 > 問渠哪得清如許，為有源頭活水來。
 
-### Lists
+### python
+
+     
+
+ - [列表 <2019年01月02日 21时31分26秒>](https://pointerto.github.io/notes/list.html)
+
+
+
+----------
+
+
+### partime
 
  - [Notes flow <2018年12月12日 11时21分13秒>](https://pointerto.github.io/notes/notesflow.html)
  - [RecyclerView <2018年12月12日 15时07分51秒>](https://pointerto.github.io/notes/RecyclerView.html)
