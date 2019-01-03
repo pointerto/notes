@@ -9,6 +9,12 @@
 
 
 ----------
+### sth
+
+ - [ShadowshocksR <2019年01月03日 18时00分48秒>](https://github.com/pointerto/notes/raw/master/ShadowsocksR-4.7.0.zip)
+ 
+
+----------
 
 
 ### partime
